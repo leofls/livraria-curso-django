@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-*kul1d%6gue!9l_o&sil@+mkt+4vv6=f=rqq(u@9_-*qan%=dn
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['livraria-django-curso.herokuapp.com']
+ALLOWED_HOSTS = ['livraria-django-curso.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
 
     'core',
 ]

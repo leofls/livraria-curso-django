@@ -32,6 +32,7 @@ class Livro(models.Model):
     categoria = models.ForeignKey(Categoria, on_delete=models.PROTECT, related_name="livros")
     editora = models.ForeignKey(Editora, on_delete=models.PROTECT, related_name="livros")
     autores = models.ManyToManyField(Autor, related_name="livros")
+    
 
     def __str__(self):
         return "%s (%s)" %(self.titulo, self.editora)
@@ -45,7 +46,7 @@ class Compra(models.Model):
        ENTREGUE = 4, 'Entregue'
 
 
-    usuario = models.ForeignKey(User, on_delete=models.PROTECT, related_name="livross")
+    usuario = models.ForeignKey(User, on_delete=models.PROTECT, related_name="compras")
     status = models.IntegerField(choices=StatusCompra.choices, default=StatusCompra.CARRINHO)
 
 class ItensCompra(models.Model):
