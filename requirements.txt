@@ -3,8 +3,12 @@ certifi==2020.6.20
 Django==3.2.7
 django-filter==21.1
 djangorestframework==3.13.1
+# flake8==4.0.1 dev
 gunicorn==20.1.0
 Markdown==3.3.6
+mccabe==0.6.1
+pycodestyle==2.8.0
+pyflakes==2.4.0
 pytz==2021.3
 sqlparse==0.4.2
 whitenoise==5.3.0
