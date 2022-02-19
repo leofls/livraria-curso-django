@@ -9,7 +9,9 @@ from django.shortcuts import get_object_or_404
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from rest_framework.serializers import ModelSerializer
+from rest_framework.viewsets import ModelViewSet
 
 from core.models import Categoria
 import json
@@ -95,3 +97,15 @@ class CategoriaDetail(APIView):
         categoria.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
+class CategoriasListGeneric(ListCreateAPIView):
+    queryset = Categoria.objects.all()
+    serializer_class = CategoriaSerializer
+
+class CategoriaDetailGeneric(RetrieveUpdateDestroyAPIView):
+    queryset = Categoria.objects.all()
+    lookup_field = "id"
+    serializer_class = CategoriaSerializer
+
+class CategoriaViewSet(ModelViewSet):
+    queryset = Categoria.objects.all()
+    serializer_class = CategoriaSerializer
