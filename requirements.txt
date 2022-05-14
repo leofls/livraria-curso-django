@@ -1,15 +1,22 @@
 asgiref==3.5.0
+attrs==21.4.0
 certifi==2020.6.20
 Django==3.2.7
 django-filter==21.1
 djangorestframework==3.13.1
-# flake8==4.0.1 dev
 djangorestframework-simplejwt==4.8.0
+drf-spectacular==0.22.1
 gunicorn==20.1.0
+inflection==0.5.1
+jsonschema==4.5.1
 Markdown==3.3.6
 mccabe==0.6.1
 pycodestyle==2.8.0
 pyflakes==2.4.0
+PyJWT==2.4.0
+pyrsistent==0.18.1
 pytz==2021.3
+PyYAML==6.0
 sqlparse==0.4.2
+uritemplate==4.1.1
 whitenoise==5.3.0
